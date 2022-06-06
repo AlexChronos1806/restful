@@ -1,17 +1,25 @@
 package com.payroll.rest;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+import org.springframework.stereotype.Service;
+
 @Entity
+@Service
 public class Employee {
 
 	private @Id @GeneratedValue Long id;
 	private String name;
 	private String role;
+	private List<Object> lista = new ArrayList<>();
+
+	
 	
 	public Employee() {
 	}
